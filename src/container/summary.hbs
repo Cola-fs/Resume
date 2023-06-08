@@ -4,21 +4,7 @@
 --}}
 
 <div>
-    <header>
-        <div>
-            <h1>{{name.firstname}} {{name.lastname}} | Resume</h1>
-        </div>
-        <div>
-            <b>{{position}}</b>
-        </div>
-        <br>
-        <div>
-            <em>{{salary}} per month</em>
-        </div>
-        <br>
-        <hr>
-    </header>
-
+    {{#with main}}
     <main>
         <section>
             {{>title data=summary.title }}
@@ -38,14 +24,9 @@
             </div>
         </section>
     </main>
+    {{/with}}
 
-    <footer>
-        <hr>
-        <br>
-        <a href="mailto:dmytro@mail.com">dmytro@mail.com</a> /
-        <a href="tel:+380670000123">+380670000123</a> /
-        <a href="https://www.linkedin.com/in/dmytro-test" target="_blank">LinkedIn</a>
-    </footer>
+
 
 </div>
 
