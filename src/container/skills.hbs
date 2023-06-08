@@ -1,3 +1,12 @@
+{{#with main}}
 <main>
-    Skills...
+    <section>
+        {{> title data="All Skills"}}
+        <ul>
+            {{#each skills}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </section>
 </main>
+{{/with}}

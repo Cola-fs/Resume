@@ -1,3 +1,14 @@
 <div>
-    Education page in progress...
+    {{#with main}}
+    <main>
+        <section>
+            {{> title data="My education" }}
+            <ul>
+                {{#each Educations}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </section>
+    </main>
+    {{/with}}
 </div>

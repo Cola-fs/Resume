@@ -27,12 +27,17 @@
 			<em>{{salary}} per month</em>
 		</div>
 		<br>
+		<div>
+			<address>{{address}}</address>
+		</div>
+		<br>
 		<hr>
 	</header>
 	{{/with}}
 	<nav>
-		{{> link href="/summary" text="Summary" }}
-		{{> link href="/skills" text="Skills" }}
+		{{> link href="/summary" text="Summary" line=true }}
+		{{> link href="/skills" text="Skills"line=true }}
+		{{> link href="/education" text="Education"line=true }}
 	</nav>
 	{{! ↓ ця кострукція показує куди шаблонізатору треба вставляти код з container файлу --}}
 	{{{body}}}
@@ -41,11 +46,21 @@
 	<footer>
 		<hr>
 		<br>
-		{{#with social}}
-		{{> link href=email.href text=email.text blank=true }}
-		{{> link href=phone.href text=phone.text blank=true }}
-		{{> link href=LinkedIn.href text=LinkedIn.text blank=true }}
-		{{/with}}
+		<div>
+			{{#with social}}
+			{{> link href=email.href text=email.text blank=true }}
+			{{> link href=phone.href text=phone.text blank=true }}
+			{{> link href=LinkedIn.href text=LinkedIn.text blank=true }}
+			{{/with}}
+		</div>
+		<br />
+		<div>
+			<em>Copyright by {{../header.name.firstname}} {{../header.name.lastname}}</em>
+		</div>
+		<br>
+		<div>
+			<address>{{../header.address}}</address>
+		</div>
 	</footer>
 	{{/with}}
 </body>
