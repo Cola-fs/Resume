@@ -109,7 +109,7 @@ router.get('/skills', function (req, res) {
           point: null,
         },
       ],
-	  hobbies: [
+      hobbies: [
         { name: 'Спорт', isMain: true },
         { name: 'Читання', isMain: true },
         { name: 'Прогулянки', isMain: false },
@@ -140,6 +140,59 @@ router.get('/education', function (req, res) {
         { name: 'diplom', id: 321458 },
         { name: 'diplom', id: 12654 },
         { name: 'sertificat', id: 78901 },
+      ],
+    },
+  })
+})
+// ================================================================
+
+//================================================================
+//              ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/work', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('work', {
+    // ↙ сюди вводимо JSON дані
+    layout: 'big',
+    page: {
+      title: 'Resume | Education',
+    },
+    header,
+    footer,
+
+    main: {
+      works: [
+        {
+          position: 'Junior Fullstack JS Developer',
+          company: {
+            name: 'IT-BRAINS',
+            url: null,
+          },
+
+          duration: {
+            from: '17.04.2023',
+            to: 'https://it-brains.com.ua/',
+          },
+          projectAmount: 3,
+          projects: [
+            {
+              name: 'Resume',
+              url: 'https://resume.com.ua/',
+              about: 'Open-minded for new technologies, with 1 years of experience in development.',
+              stackAmount: 3,
+              stacks: [
+                {name: 'React.js',},
+                {name: 'HTML / CSS',},
+                {name: 'Node.js',},
+              ],
+              awardAmount: 2,
+              awards: [
+                {name: 'досягнення та розвиток 1',},
+                {name: 'досягнення та розвиток 2',},
+              ],
+            },
+          ],
+        },
+        
       ],
     },
   })
