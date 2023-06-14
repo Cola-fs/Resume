@@ -1,0 +1,87 @@
+<div>
+    <h1>{{name}}</h1>
+</div>
+<div> <span>users: </span> </div>
+
+{{#each users}}
+
+<ul>
+    <br>
+    <hr>
+    <li>
+
+        <div>id: {{id}} </div>
+        <div> <span class="badge rounded-pill text-bg-dark">{{name}}</span> ({{age}})</div>
+        <div> {{gender}} </div>
+        <br>
+        <div> <span class="badge rounded-pill text-bg-info">friends:</span> </div>
+        {{#each friends}}
+        <ul>
+            <li>
+
+                <div>id: {{id}} </div>
+                <div> <span class="badge rounded-pill text-bg-light">{{name}}</span> ({{age}})</div>
+                <div> {{gender}} </div>
+                <br>
+                <div><b> mutual_friends:</b> </div>
+                {{#each mutual_friends}}
+                <ul>
+                    <li>
+                        <div>id: {{id}} </div>
+                        <div> {{name}} ({{age}})</div>
+                        <div> {{gender}} </div>
+                    </li>
+                </ul>
+                {{/each}}
+                <br>
+                <div> <span class="badge rounded-pill text-bg-info">groups:</span> </div>
+                {{#each groups}}
+                <ul>
+                    <li>
+                        <div> id: {{id}} </div>
+                        <div> {{name}} </div>
+                        <div> {{description}} </div>
+                        <br>
+                        {{#each members}}
+                        <ul>
+                            <li>
+                                <div>id: {{id}} </div>
+                                <div> {{name}} ({{age}})</div>
+                                <div> {{gender}} </div>
+                            </li>
+                        </ul>
+                        {{/each}}
+
+                    </li>
+                </ul>
+                {{/each}}
+
+
+            </li>
+        </ul>
+        {{/each}}
+        <br>
+        <div> <span class="badge rounded-pill text-bg-info">groups:</span> </div>
+        {{#each groups}}
+        <ul>
+            <li>
+                <div> id: {{id}} </div>
+                <div> {{name}} </div>
+                <div> {{description}} </div>
+                <br>
+                {{#each members}}
+                <ul>
+                    <li>
+                        <div>id: {{id}} </div>
+                        <div> {{name}} ({{age}})</div>
+                        <div> {{gender}} </div>
+                    </li>
+                </ul>
+                {{/each}}
+
+            </li>
+        </ul>
+        {{/each}}
+    </li>
+</ul>
+{{/each}}
