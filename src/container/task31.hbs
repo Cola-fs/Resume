@@ -1,0 +1,53 @@
+<div class="row-12">
+    <div>
+        {{#with navigation}}
+
+        {{#each links}}
+
+        <a href="{{href}}" class="btn btn-link col-2"> {{text}} </a>
+
+        {{/each}}
+        {{#with button}}
+        <a href="{{href}}" class="btn btn-primary col-2"> {{text}} </a>
+        {{/with}}
+
+        {{/with}}
+    </div>
+
+</div>
+<hr>
+<div>
+    {{#with header}}
+    <h1> {{title}} </h1>
+    <p> {{description}} </p>
+    {{#with button}}
+    <a href="{{link}}" class="btn btn-primary col-2 "> {{text}} </a>
+
+    {{/with}}
+
+    {{/with}}
+</div>
+<hr>
+
+    {{#with city}}
+    <h2> {{title}} </h2>
+
+    {{#each cards}}
+
+    <div class="card col-4">
+
+        {{#with picture}}
+
+
+        <img src="{{src}}" alt="{{alt}}">
+    </div>
+
+    {{/with}}
+
+    {{/each}}
+
+</div>
+
+
+
+{{/with}}
