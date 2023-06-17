@@ -1,0 +1,167 @@
+<main class="m-4">
+    <div class="card">
+        <div class="nav">
+            {{#with navigation}}
+
+            {{#each links}}
+            <div class="nav-item">
+                <a class="nav-link" href="{{href}}"> {{text}} </a>
+            </div>
+
+            {{/each}}
+            {{/with}}
+        </div>
+    </div>
+
+    <div class=" mt-5">
+        {{#with newsBlock}}
+        <div class="">
+            <div class="display-4 my-3 text-center">
+                {{title}}
+            </div>
+            <div class="row g-1">
+                {{#each cards}}
+
+                <div class="col-3">
+                    <div class=" card text-bg-dark ">
+                        <div class="card-body">
+                            <div class="card-header">
+                                <div class="card-title"> {{title}}
+                                    {{#if isNew}}
+                                    <div class="badge rounded-pill text-bg-success">
+                                        New
+                                    </div>
+                                    {{/if}}
+                                    {{#if isTop}}
+                                    <div class="badge rounded-pill text-bg-danger">
+                                        Top
+                                    </div>
+                                    {{/if}}
+
+
+                                </div>
+                            </div>
+                            <div>
+                                {{description}}
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                {{/each}}
+
+            </div>
+
+
+
+
+        </div>
+        {{/with}}
+
+    </div>
+
+    <hr class="my-5">
+
+    {{#with goodsBlock}}
+    <div class="nav nav-tabs mb-5">
+        {{#each tabs}}
+        <div class="nav-item">
+            <div class="nav-link {{#if isActive}} active {{/if}}
+             {{#if isDisabled}} disabled {{/if}}
+            ">
+                {{text}}
+            </div>
+
+        </div>
+        {{/each}}
+    </div>
+
+    <div class="row">
+        {{#each cards}}
+
+        <div class="col-4 my-2">
+            <div class=" card ">
+                <div class="card-body">
+                    <img class="card-img-top" src="{{image}}" alt="{{title}}">
+                    <div class="card-title"> {{title}}
+                        {{#if isHot}}
+                        <div class="badge rounded-pill text-bg-warning">
+                            Hot
+                        </div>
+                        {{/if}}
+                        {{#if isNew}}
+                        <div class="badge rounded-pill text-bg-primary">
+                            New
+                        </div>
+                        {{/if}}
+
+
+
+                    </div>
+
+                    <div>
+                        {{description}}
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        {{/each}}
+    </div>
+
+
+    {{/with}}
+
+    <hr class="my-5">
+    <div class="text-bg-dark p-3">
+        {{#with subscribe}}
+        <h2> {{header}} </h2>
+        <p> {{description}} </p>
+        {{#each buttons}}
+        <a class="btn btn-primary col-2 my-1" href="{{link}}"> {{text}} </a>
+        <br>
+        {{/each}}
+        {{/with}}
+    </div>
+
+    <hr class="my-5">
+
+    <div class="text-bg-success p-3 text-center">
+        {{#with service}}
+        <h2> {{title}} </h2>
+        <p> {{description}} </p>
+        {{#each buttons}}
+        <a class="btn btn-primary col-2 my-1" href="{{link}}"> {{text}} </a>
+        <br>
+        {{/each}}
+        {{/with}}
+    </div>
+
+    <hr class="my-5">
+
+    <div>
+        {{#each footer}}
+        <div class="nav row ">
+
+            {{#each this }}
+            <div class=" nav-item col-2">
+                {{#with this}}
+
+                <a class="nav-link" href="{{link}}">{{text}} </a>
+            </div>
+
+            {{/with}}
+
+            {{/each}}
+        </div>
+
+        {{/each}}
+    </div>
+
+
+
+</main>
