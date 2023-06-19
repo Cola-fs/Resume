@@ -143,25 +143,11 @@
 
     <hr class="my-5">
 
-    <div>
-        {{#each footer}}
-        <div class="nav row ">
 
-            {{#each this }}
-            <div class=" nav-item col-2">
-                {{#with this}}
 
-                <a class="nav-link" href="{{link}}">{{text}} </a>
-            </div>
-
-            {{/with}}
-
-            {{/each}}
-        </div>
-
-        {{/each}}
-    </div>
-
+   <div>
+    {{>footer_shop_nav}}
+   </div>
 
 
 </main>
