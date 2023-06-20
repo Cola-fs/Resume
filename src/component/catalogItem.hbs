@@ -1,0 +1,77 @@
+<div class="row ">
+	{{#each goodsList}}
+
+	<div class=" col-6 p-0 p-2 ">
+		<div class="card">
+			{{#with this}}
+			<img class="card-img-top" src="{{img}}" alt="">
+			<div class="card-body p-2">
+				<div>
+					{{#if isHot}}
+					<div class="badge text-bg-warning my-1">Hot</div>
+					{{/if}}
+					{{#if isNew}}
+					<div class="badge text-bg-primary my-1">New</div>
+					{{/if}}
+
+				</div>
+				<div>
+					<div>
+						{{#if isFast}}
+						<div class="badge text-bg-success my-1">Швидка доставка</div>
+						{{/if}}
+					</div>
+					<div>
+						{{#if isFast}}
+						<div class="badge text-bg-secondary my-1">Швидка доставка</div>
+						{{/if}}
+					</div>
+
+				</div>
+				<div>
+					<h6>{{name}}</h6>
+				</div>
+				<div>
+					{{#with review}}
+					{{amount}}:{{text}}
+					{{/with}}
+				</div>
+				<div>
+					<h6 class="my-1">{{price}}</h6>
+				</div>
+				<div>
+					{{delivery}}
+				</div>
+				<div>
+					{{#each buttons}}
+					<div>
+						{{#with this}}
+						<div>
+							<a class="btn my-1 {{#if isPrimary}}btn-primary{{/if}} {{#if isSecondary}}btn-secondary{{/if}}"
+								href="{{link}}">{{text}}</a>
+						</div>
+						{{/with}}
+					</div>
+					{{/each}}
+				</div>
+				<div>
+					{{#each characteristics}}
+					<div>
+						{{#with this}}
+						<ul class="my-2">
+							<li class="">{{title}}: {{value}}</li>
+						</ul>
+
+
+						{{/with}}
+					</div>
+					{{/each}}
+				</div>
+			</div>
+			{{/with}}
+		</div>
+
+
+	</div>
+	{{/each}}
+</div>
