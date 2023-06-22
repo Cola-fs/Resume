@@ -3,52 +3,52 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 --}}
 
-<div>
+<div class="my-2">
     {{#with main}}
-    <main>
-        <section>
+    <main class="m-2">
+        <section class="my-2">
             {{>title data="Work History" big=true}}
             {{#each works}}
             <ul>
                 <li>
 
-                    <div>
+                    <div class="my-2">
                         {{position}}
                     </div>
-                    <br>
-                    <div>
+
+                    <div class="my-2">
                         {{duration.from}} -
                         {{#if duration.to}} {{duration.to }} {{else}} (досі працюємо) {{/if}}
                     </div>
-                    <br>
-                    <div>
+
+                    <div class="my-2 badge text-bg-info">
                         {{#if company.url}}
                         {{> link href=company.url text=company.name blank=true noLine=true}}
                         {{else}}
                         <b> {{company.name}} </b>
                         {{/if}}
                     </div>
-                    <br>
 
-                    <div>
+
+                    <div class="my-2 ">
                         <strong>Projects ({{projectAmount}}) </strong>
                     </div>
-                    <br>
+
                     {{#each projects}}
                     <ul>
                         <li>
                             {{> link href=url text=name blank=true noLine=true}}
-                            <br>
-                            <div>
+
+                            <div class="my-2">
                                 <p>
                                     {{about}}
                                 </p>
                             </div>
 
-                            <br>
-                            <div><em>Project stacks ({{stackAmount}}) </em></div>
-                            <br> 
-                            <div>
+
+                            <div class="my-2 badge text-bg-secondary"><em>Project stacks ({{stackAmount}}) </em></div>
+
+                            <div class="my-2">
                                 {{#each stacks}}
                                 <ul>
                                     <Li>
@@ -58,10 +58,10 @@
                                 {{/each}}
                             </div>
 
-                            <br>
-                            <div><em>Project awards</em></div>
-                            <br>
-                            <div>
+
+                            <div class="my-2 badge text-bg-secondary"><em>Project awards</em></div>
+
+                            <div class="my-2">
                                 {{#each awards}}
                                 <ul>
                                     <Li>

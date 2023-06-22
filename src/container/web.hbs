@@ -1,29 +1,29 @@
 <h1>Web</h1>
-<div>
+<div class="my-2">
     {{#with web}}
-    <div><b>Langues:</b></div>
+    <div class="my-2"><b>Langues:</b></div>
     {{#each languages}}
     <ul>
         <li>
-            <div> <b>{{name}}</b> </div>
-            <div> version {{version}} </div>
-            <div> {{description}} </div>
-            <br>
+            <div class="badge text-bg-info"> <b>{{name}}</b> </div>
+            <div class="my-2"> version {{version}} </div>
+            <div class="my-2"> {{description}} </div>
+
             {{#each elements}}
             <ul>
                 <li>
-                    <div> <b>{{name}}</b> </div>
-                    <div> {{description}} </div>
+                    <div class="my-2 badge text-bg-secondary"> <b>{{name}}</b> </div>
+                    <div class="my-2"> {{description}} </div>
 
-                    <br>
+
                     {{#each attributes}}
                     <ul>
                         <li>
-                            <div> <b>{{name}}</b> </div>
-                            <div> {{description}} </div>
+                            <div class="my-2"> <b>{{name}}</b> </div>
+                            <div class="my-2"> {{description}} </div>
                         </li>
                     </ul>
-                    <br>
+
                     {{/each}}
 
                 </li>
@@ -33,18 +33,18 @@
             {{#each properties}}
             <ul>
                 <li>
-                    <div> <b>{{name}}</b> </div>
-                    <div> {{description}} </div>
+                    <div class="my-2 badge text-bg-secondary"> <b>{{name}}</b> </div>
+                    <div class="my-2"> {{description}} </div>
 
-                    <br>
+
                     {{#each values}}
                     <ul>
                         <li>
-                            <div> <b>{{value}}</b> </div>
-                            <div> {{description}} </div>
+                            <div class="my-2"> <b>{{value}}</b> </div>
+                            <div class="my-2"> {{description}} </div>
                         </li>
                     </ul>
-                    <br>
+
                     {{/each}}
 
                 </li>
@@ -54,19 +54,19 @@
             {{#each functions}}
             <ul>
                 <li>
-                    <div> <b>{{name}}</b> </div>
-                    <div> {{description}} </div>
+                    <div class="my-2 badge text-bg-secondary"> <b>{{name}}</b> </div>
+                    <div class="my-2"> {{description}} </div>
 
-                    <br>
+
                     {{#each parameters}}
                     <ul>
                         <li>
-                            <div> <b>{{name}}</b> </div>
-                            <div> {{type}} </div>
-                            <div> {{description}} </div>
+                            <div class="my-2 "> <b>{{name}}</b> </div>
+                            <div class="my-2"> {{type}} </div>
+                            <div class="my-2"> {{description}} </div>
                         </li>
                     </ul>
-                    <br>
+
                     {{/each}}
 
                 </li>
