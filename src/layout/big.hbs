@@ -10,19 +10,20 @@
 		{{page.title}}
 	</title>
 	<meta charset='utf-8' />
+	<link href='css/normalize.css' rel='stylesheet' />
 	<link href='css/index.css' rel='stylesheet' />
 </head>
 
 <body>
 	{{> nav}}
-	
-	
+
+
 	<hr>
 	{{! ↓ ця кострукція показує куди шаблонізатору треба вставляти код з container файлу --}}
 	{{{body}}}
 	<br>
 	<hr>
-	
+
 	{{> footer}}
 
 </body>

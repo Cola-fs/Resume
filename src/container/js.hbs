@@ -1,71 +1,82 @@
-<div>
-    <h1> {{name}} </h1>
-</div>
+<main class="m-4">
+    <div>
+        <h1> {{name}} </h1>
+    </div>
 
-<div> {{description}} </div>
-{{#with history}}
-<ul>
-    <div> {{founder}} {{year}} </div>
-</ul>
-{{/with}}
+    <div> {{description}} </div>
+    {{#with history}}
+    <ul>
+        <div> {{founder}} {{year}} </div>
+    </ul>
+    {{/with}}
 
 
-<br>
-<div><span class="badge text-bg-info">types</span></div>
-{{#each types}}
 
-<ul>
-    <li>
-        {{this}}
-    </li>
-</ul>
-{{/each}}
 
-<div><span class="badge text-bg-info">syntax</span></div>
-{{#with syntax}}
-<ul>
-        <br>
-        <div>variables</div>
-        {{#each variables}}
-        <ul>
-            <li>
+    <div class="my-3">
+        <div><span class="badge text-bg-info">types</span></div>
+        {{#each types}}
+
+
+        <ul class="my-1">
+            <li class="">
                 {{this}}
             </li>
         </ul>
         {{/each}}
+    </div>
+    <div><span class="badge text-bg-info">syntax</span></div>
+    {{#with syntax}}
+    <ul>
+        <div class="my-3">
+            <div class="badge text-bg-secondary">variables</div>
+            {{#each variables}}
+            <ul class="my-1">
+                <li>
+                    {{this}}
+                </li>
+            </ul>
+            {{/each}}
 
-        <br>
-        <div>functions</div>
-        {{#each functions}}
-        <ul>
-            <li>
-                {{this}}
-            </li>
-        </ul>
-        {{/each}}
+        </div>
 
-        <br>
-        <div>conditionals</div>
-        {{#each conditionals}}
-        <ul>
-            <li>
-                {{this}}
-            </li>
-        </ul>
-        {{/each}}
+        <div class="my-3">
+            <div class="badge text-bg-secondary">functions</div>
+            {{#each functions}}
+            <ul class="my-1">
+                <li>
+                    {{this}}
+                </li>
+            </ul>
+            {{/each}}
 
-        <br>
-        <div>loops</div>
-        {{#each loops}}
-        <ul>
-            <li>
-                {{this}}
-            </li>
-        </ul>
-        {{/each}}
+        </div>
 
-        <br>
-        <div>classes</div>
+        <div class="my-3">
+            <div class="badge text-bg-secondary">conditionals</div>
+            {{#each conditionals}}
+            <ul class="my-1">
+                <li>
+                    {{this}}
+                </li>
+            </ul>
+            {{/each}}
+        </div>
+
+
+        <div class="my-3">
+            <div class="badge text-bg-secondary">loops</div>
+            {{#each loops}}
+            <ul>
+                <li>
+                    {{this}}
+                </li>
+            </ul>
+            {{/each}}
+        </div>
+
+
+        <div class="badge text-bg-secondary">classes</div>
         {{#each classes}}
         <ul>
             <li>
@@ -73,49 +84,56 @@
             </li>
         </ul>
         {{/each}}
-</ul>
-{{/with}}
+    </ul>
+    {{/with}}
 
-<br>
-<div><span class="badge text-bg-info">features</span></div>
-{{#each features}}
+    <div class="my-3">
+        <div><span class="badge text-bg-info">features</span></div>
+        {{#each features}}
 
-<ul>
-    <li>
-        {{this}}
-    </li>
-</ul>
-{{/each}}
+        <ul class="my-1">
+            <li>
+                {{this}}
+            </li>
+        </ul>
+        {{/each}}
+    </div>
 
-<br>
-<div><span class="badge text-bg-info">libraries</span></div>
-{{#each libraries}}
 
-<ul>
-    <li>
-        {{this}}
-    </li>
-</ul>
-{{/each}}
+    <div class="my-3">
+        <div><span class="badge text-bg-info">libraries</span></div>
+        {{#each libraries}}
+        <ul class="my-1">
+            <li>
+                {{this}}
+            </li>
+        </ul>
+        {{/each}}
+    </div>
 
-<br>
-<div><span class="badge text-bg-info">tools</span></div>
-{{#each tools}}
 
-<ul>
-    <li>
-        {{this}}
-    </li>
-</ul>
-{{/each}}
+    <div class="my-3">
+        <div><span class="badge text-bg-info">tools</span></div>
+        {{#each tools}}
 
-<br>
-<div><span class="badge text-bg-info">community</span></div>
-{{#each community}}
+        <ul class="my-1">
+            <li>
+                {{this}}
+            </li>
+        </ul>
+        {{/each}}
+    </div>
 
-<ul>
-    <li>
-        {{name}} ({{type}}) 
-    </li>
-</ul>
-{{/each}}
+    <div class="my-3">
+        <div><span class="badge text-bg-info">community</span></div>
+        {{#each community}}
+        <ul class="my-1">
+            <li>
+                {{name}} ({{type}})
+            </li>
+        </ul>
+        {{/each}}
+    </div>
+
+
+</main>

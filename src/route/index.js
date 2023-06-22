@@ -39,7 +39,32 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+    page: [
+      'bio',
+      'car',
+      'education',
+      'facebook',
+      'js',
+      'person',
+      'program',
+      'shopcart',
+      'shopcatalog',
+      'shophome',
+      'shoporder',
+      'shopprofile',
+      'shopreview',
+      'skills',
+      'summary',
+      'task21',
+      'task22',
+      'task31',
+      'web',
+      'work',
+
+    ],
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
@@ -152,7 +177,7 @@ router.get('/work', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('work', {
     // ↙ сюди вводимо JSON дані
-    layout: 'big',
+    layout: 'basic',
     page: {
       title: 'Resume | Education',
     },
@@ -2714,7 +2739,7 @@ router.get('/shopreview', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopreview', {
-     layout: 'shop',
+    layout: 'shop',
     navigation: {
       links: [
         {
